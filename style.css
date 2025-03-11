@@ -1,58 +1,125 @@
-/* style.css */
-
-body {
-    font-family: Arial, sans-serif;
+/* General Styling */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #333;
-    color: white;
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1e1e1e;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
     text-align: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0 1rem;
-    display: inline-block;
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-section {
-    padding: 2rem;
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-h1, h2, h3 {
-    color: #333;
+.project {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
-.project, ul {
-    background-color: #eee;
-    padding: 1rem;
-    margin-bottom: 1rem;
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project h3, .project p {
+    padding: 15px;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 12px;
     border-radius: 8px;
+    border: none;
+    outline: none;
 }
 
-.project a {
-    color: #0077cc;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
+input, textarea {
     background-color: #333;
-    color: white;
+    color: #fff;
 }
 
-a:hover {
-    color: #0056b3;
+button {
+    background-color: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
+button:hover {
+    background-color: #008c9e;
 }
+
